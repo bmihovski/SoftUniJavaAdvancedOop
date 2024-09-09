@@ -16,7 +16,7 @@ INPUTS=(tests/Test.in.split.*)
 OUTPUTS=(tests/Test.out.split.*)
 for i in "${!INPUTS[@]}"; do
   echo "Running test $((i + 1))..."
-  java -jar target/FurnitureFactory-1.0-SNAPSHOT.jar <"${INPUTS[i]}" >tests/temp.out.txt
+  java -jar target/CliTest-1.0-SNAPSHOT.jar <"${INPUTS[i]}" >tests/temp.out.txt
   if diff -Z -B -q tests/temp.out.txt "${OUTPUTS[i]}" >/dev/null; then
     echo "Test $((i + 1)) passed!"
   else
