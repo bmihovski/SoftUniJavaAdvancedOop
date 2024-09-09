@@ -1,4 +1,4 @@
-package furnitureFactory.core;
+package furnitures.core;
 
 public interface Engine extends Runnable{
 }

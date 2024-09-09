@@ -1,6 +1,6 @@
-package furnitureFactory.core;
+package furnitures.core;
 
-import furnitureFactory.entities.factories.Factory;
+import furnitures.entities.factories.Factory;
 
 public class ControllerImpl implements Controller {
     //TODO Implement all the methods

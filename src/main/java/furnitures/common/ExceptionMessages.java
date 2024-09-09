@@ -1,4 +1,4 @@
-package furnitureFactory.common;
+package furnitures.common;
 
 public class ExceptionMessages {
 

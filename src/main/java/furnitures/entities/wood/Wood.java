@@ -1,4 +1,4 @@
-package furnitureFactory.entities.wood;
+package furnitures.entities.wood;
 
 public interface Wood {
 

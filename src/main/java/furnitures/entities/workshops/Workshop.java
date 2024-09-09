@@ -1,6 +1,6 @@
-package furnitureFactory.entities.workshops;
+package furnitures.entities.workshops;
 
-import furnitureFactory.entities.wood.Wood;
+import furnitures.entities.wood.Wood;
 
 public interface Workshop {
 

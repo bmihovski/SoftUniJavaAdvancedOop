@@ -1,6 +1,6 @@
-package furnitureFactory.core;
+package furnitures.core;
 
-import furnitureFactory.entities.factories.Factory;
+import furnitures.entities.factories.Factory;
 
 public interface Controller {
 

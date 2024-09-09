@@ -1,7 +1,7 @@
-package furnitureFactory.core;
+package furnitures.core;
 
-import furnitureFactory.common.Command;
-import furnitureFactory.entities.factories.Factory;
+import furnitures.common.Command;
+import furnitures.entities.factories.Factory;
 
 import java.io.BufferedReader;
 import java.io.IOException;

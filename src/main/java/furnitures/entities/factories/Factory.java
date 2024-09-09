@@ -1,6 +1,6 @@
-package furnitureFactory.entities.factories;
+package furnitures.entities.factories;
 
-import furnitureFactory.entities.workshops.Workshop;
+import furnitures.entities.workshops.Workshop;
 
 import java.util.Collection;
 

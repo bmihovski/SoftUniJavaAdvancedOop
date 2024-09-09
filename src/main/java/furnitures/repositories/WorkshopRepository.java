@@ -1,6 +1,6 @@
-package furnitureFactory.repositories;
+package furnitures.repositories;
 
-import furnitureFactory.entities.workshops.Workshop;
+import furnitures.entities.workshops.Workshop;
 
 public interface WorkshopRepository {
 

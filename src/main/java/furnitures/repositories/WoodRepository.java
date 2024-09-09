@@ -1,6 +1,6 @@
-package furnitureFactory.repositories;
+package furnitures.repositories;
 
-import furnitureFactory.entities.wood.Wood;
+import furnitures.entities.wood.Wood;
 
 public interface WoodRepository {
 
