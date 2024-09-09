@@ -1,0 +1,18 @@
+4
+Allocate Single 3
+Deallocate Single 3
+Allocate Multiple 1
+Deallocate Multiple 1
+===
+4
+Allocate Single 1
+Deallocate Multiple 3
+Allocate Multiple 2
+Deallocate Multiple 1
+===
+5
+Allocate Single 1
+Allocate Multiple 1
+Deallocate Single 1
+Allocate Multiple 1
+Deallocate Multiple 1
