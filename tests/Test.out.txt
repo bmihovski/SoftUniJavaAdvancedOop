@@ -1,15 +1,6 @@
-Allocate Single 3 - success
-Deallocate Single 3 - success
-Allocate Multiple 1 - success
-Deallocate Multiple 1 - success
+(2 + 3)
+(3 + 1)
+(2 - (2 + 3) * 4 / (3 + 1))
 ===
-Allocate Single 1 - success
-Deallocate Multiple 3 - system crash prevented, will skip this deallocation
-Allocate Multiple 2 - success
-Deallocate Multiple 1 - Warning allocate/deallocate mismatch, will skip this deallocation
-===
-Allocate Single 1 - success
-Allocate Multiple 1 - memory leak prevented, will not make allocation
-Deallocate Single 1 - success
-Allocate Multiple 1 - success
-Deallocate Multiple 1 - success
+(2 + 3)
+(2 + 3)
