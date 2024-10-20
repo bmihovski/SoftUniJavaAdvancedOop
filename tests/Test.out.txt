@@ -1,7 +1,13 @@
-Matches: 3
-Males left: 1
-Females left: none
-===
-Matches: 4
-Males left: none
-Females left: 15, 13, 4
+Surfer Mike added.
+Surfer John added.
+Surfers who have their own surfboards: John
+Surfer Charlie added.
+There are no free surfboards.
+Hulk has not enough money to rent a surfboard.
+Charlie is most experienced surfer with 19 years experience.
+Beach Malibu was visited by the following surfers:
+1. Mike with 1 years experience.
+2. John with 10 years experience.
+There are no surfers on Playa La Ropa beach.
+Beach Veleka was visited by the following surfers:
+1. Charlie with 19 years experience.

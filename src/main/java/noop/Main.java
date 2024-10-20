@@ -1,4 +1,4 @@
-package furnitures;
+package noop;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

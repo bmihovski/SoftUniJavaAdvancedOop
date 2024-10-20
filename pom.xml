@@ -32,7 +32,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>furnitures.Main</mainClass>
+                            <mainClass>surfers.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
