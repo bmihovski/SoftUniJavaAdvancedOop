@@ -1,5 +1,52 @@
-3 6 9 12
-12 9 6 1 25 25
+5, 7
+*****T*
+****T**
+**B****
+***T**T
+C*****T
+up
+up
+down
+right
+right
+up
+up
+defuse
+down
+defuse
 ===
-3 0 3 6 9 0 12
-12 9 6 1 2 3 15 13 4
+2, 10
+*TBC*T****
+**********
+right
+down
+right
+right
+right
+right
+left
+left
+left
+left
+left
+left
+up
+defuse
+===
+5, 5
+T*C*T
+**T**
+T*B*T
+**T**
+T***T
+right
+down
+down
+left
+left
+defuse
+down
+down
+down
+down
+left

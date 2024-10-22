@@ -32,7 +32,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>surfers.Main</mainClass>
+                            <mainClass>noop.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

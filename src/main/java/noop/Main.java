@@ -1,10 +1,6 @@
 package noop;
 
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Deque;
 import java.util.Scanner;
-import java.util.function.Predicate;
 
 /** This is the main class of the application. It is the entry point of the program. */
 public class Main {
@@ -16,69 +12,112 @@ public class Main {
    */
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-    Deque<Integer> females = new ArrayDeque<>();
-    Deque<Integer> males = new ArrayDeque<>();
-    String[] inputMales = scanner.nextLine().split("\\s+");
-    String[] inputFemales = scanner.nextLine().split("\\s+");
-    scanner.close();
-    Predicate<Integer> isPositive = v -> v > 0;
-    Arrays.stream(inputMales)
-        .mapToInt(Integer::valueOf)
-        .boxed()
-        .filter(isPositive)
-        .forEach(males::push);
-    Arrays.stream(inputFemales)
-        .mapToInt(Integer::valueOf)
-        .boxed()
-        .filter(isPositive)
-        .forEach(females::offer);
-    int matchesCount = 0;
-    while (!females.isEmpty() && !males.isEmpty()) {
-      int currentMale = males.peek();
-      int currentFemale = females.peek();
-      if (currentMale % 25 == 0) {
-        males.pop();
-        if (!males.isEmpty()) {
-          males.pop();
-        }
-        continue;
-      }
-      if (currentFemale % 25 == 0) {
-        females.poll();
-        if (!females.isEmpty()) {
-          females.poll();
-        }
-        continue;
-      }
-      if (currentMale == currentFemale) {
-        matchesCount++;
-        males.pop();
-        females.poll();
-      } else {
-        int temp = currentMale;
-        males.pop();
-        females.poll();
-        males.push(temp - 2);
-      }
-      males.removeIf(isPositive.negate());
-      females.removeIf(isPositive.negate());
-    }
-    System.out.println("Matches: " + matchesCount);
-    if (males.isEmpty()) {
-      System.out.println("Males left: none");
-    } else {
-      System.out.print("Males left: ");
-      System.out.println(
-          String.join(", ", males.stream().map(String::valueOf).toArray(String[]::new)));
+
+    // Read dimensions
+    String[] dimensions = scanner.nextLine().split(", ");
+    int rows = Integer.parseInt(dimensions[0]);
+    int cols = Integer.parseInt(dimensions[1]);
+
+    // Read the map
+    char[][] map = new char[rows][cols];
+    for (int i = 0; i < rows; i++) {
+      map[i] = scanner.nextLine().toCharArray();
     }
 
-    if (females.isEmpty()) {
-      System.out.println("Females left: none");
-    } else {
-      boolean isFirst = false;
-      System.out.print("Females left: ");
-      System.out.println(
-          String.join(", ", females.stream().map(String::valueOf).toArray(String[]::new)));
+    // Read commands
+    String[] commands = scanner.nextLine().split("\\s+");
+
+    // Initialize variables
+    int timeLeft = 16;
+    int ctRow = -1, ctCol = -1;
+    int bombRow = -1, bombCol = -1;
+
+    // Find initial positions of counter-terrorist and bomb
+    for (int r = 0; r < rows; r++) {
+      for (int c = 0; c < cols; c++) {
+        if (map[r][c] == 'C') {
+          ctRow = r;
+          ctCol = c;
+        } else if (map[r][c] == 'B') {
+          bombRow = r;
+          bombCol = c;
+        }
+      }
+    }
+
+    // Process commands
+    for (String command : commands) {
+      if (timeLeft <= 0) {
+        System.out.println("Terrorists win!");
+        System.out.println("Bomb was not defused successfully!");
+        printMap(map, ctRow, ctCol);
+        return;
+      }
+
+      if (command.equals("defuse")) {
+        if (ctRow == bombRow && ctCol == bombCol) {
+          if (timeLeft >= 4) {
+            timeLeft -= 4;
+            map[bombRow][bombCol] = 'D';
+            System.out.println("Counter-terrorist wins!");
+            System.out.println("Bomb has been defused: " + timeLeft + " second/s remaining.");
+            printMap(map, ctRow, ctCol);
+            return;
+          } else {
+            System.out.println("Terrorists win!");
+            System.out.println("Bomb was not defused successfully!");
+            printMap(map, ctRow, ctCol);
+            return;
+          }
+        } else {
+          timeLeft -= 2;
+        }
+      } else {
+        int newRow = ctRow, newCol = ctCol;
+        switch (command) {
+          case "up":
+            newRow = ctRow > 0 ? ctRow - 1 : ctRow;
+            break;
+          case "down":
+            newRow = ctRow < rows - 1 ? ctRow + 1 : ctRow;
+            break;
+          case "left":
+            newCol = ctCol > 0 ? ctCol - 1 : ctCol;
+            break;
+          case "right":
+            newCol = ctCol < cols - 1 ? ctCol + 1 : ctCol;
+            break;
+        }
+
+        if (newRow != ctRow || newCol != ctCol) {
+          timeLeft--;
+          ctRow = newRow;
+          ctCol = newCol;
+          if (map[ctRow][ctCol] == 'T') {
+            map[ctRow][ctCol] = '*';
+            System.out.println("Terrorists win!");
+            printMap(map, ctRow, ctCol);
+            return;
+          }
+        }
+      }
+    }
+
+    System.out.println("Terrorists win!");
+    System.out.println("Bomb was not defused successfully!");
+    printMap(map, ctRow, ctCol);
+  }
+
+  private static void printMap(char[][] map, int ctRow, int ctCol) {
+    for (int r = 0; r < map.length; r++) {
+      for (int c = 0; c < map[r].length; c++) {
+        if (r == ctRow && c == ctCol) {
+          System.out.print('C');
+        } else {
+          System.out.print(map[r][c]);
+        }
+      }
+      System.out.println();
     }
   }
 }
