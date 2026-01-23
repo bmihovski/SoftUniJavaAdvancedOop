@@ -35,7 +35,11 @@ To run the tests for this project, you can use the `run_tests.sh` script. This s
 1. Open a terminal and navigate to the project directory.
 2. Run the script using the following command:
    ```sh
-   ./run_tests.sh
+      ./run_tests.sh
+   ```
+   OR
+   ```sh
+      ./run_tests.zsh
    ```
 
 ### Interpreting the Results
@@ -49,4 +53,3 @@ To run the tests for this project, you can use the `run_tests.sh` script. This s
 ### Cleaning Up
 
 The script will automatically clean up the temporary files it creates during the test run.
-
