@@ -67,6 +67,10 @@
                             <goal>check</goal>
                         </goals>
                         <configuration>
+                            <includes>
+                                <include>aquarium/Aquarium.class</include>
+                                <include>aquarium/Fish.class</include>
+                            </includes>
                             <rules>
                                 <rule>
                                     <element>BUNDLE</element>
