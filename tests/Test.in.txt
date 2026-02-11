@@ -1,52 +1,33 @@
-5, 7
-*****T*
-****T**
-**B****
-***T**T
-C*****T
-up
-up
-down
-right
-right
-up
-up
-defuse
-down
-defuse
+AddAquarium SaltwaterAquarium DangerZone
+AddDecoration Plant
+AddDecoration Plant
+AddDecoration Ornament
+InsertDecoration DangerZone Plant
+InsertDecoration DangerZone Plant
+InsertDecoration DangerZone Ornament
+AddFish DangerZone SaltwaterFish Curibou Angelfish 22.33
+AddFish DangerZone SaltwaterFish Devil Anglerfish 48.84
+FeedFish DangerZone
+CalculateValue DangerZone
+FeedFish DangerZone
+Report
+Exit
 ===
-2, 10
-*TBC*T****
-**********
-right
-down
-right
-right
-right
-right
-left
-left
-left
-left
-left
-left
-up
-defuse
-===
-5, 5
-T*C*T
-**T**
-T*B*T
-**T**
-T***T
-right
-down
-down
-left
-left
-defuse
-down
-down
-down
-down
-left
+AddAquarium SaltwaterAquarium Underworld
+AddFish Underworld FreshwaterFish Nemo Clownfish 13.40
+AddFish Underworld SaltwaterFish Nemo Clownfish 13.40
+AddAquarium FreshwaterAquarium Riverworld
+AddFish Riverworld FreshwaterFish Emerald Catfish 7.32
+AddFish Underworld SweetwaterFish Diamond Catfish 3.50
+AddFish Underworld EuryhalineFish Chico Stingray 33.99
+AddFish Riverworld EuryhalineFish Bully Shark 48.99
+AddDecoration Plant
+InsertDecoration Riverworld Plant
+InsertDecoration Underworld Plant
+AddDecoration Plant
+InsertDecoration Underworld Plant
+FeedFish Riverworld
+FeedFish Riverworld
+AddFish Riverworld FreshwaterFish Name Species -10
+Report
+Exit

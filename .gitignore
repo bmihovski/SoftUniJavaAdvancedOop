@@ -27,3 +27,5 @@ replay_pid*
 target
 .classpath
 .project
+/src/main/java/.DS_Store
+/src/.DS_Store

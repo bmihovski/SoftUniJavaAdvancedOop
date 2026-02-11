@@ -1,13 +1,41 @@
-Terrorists win!
-Bomb was not defused successfully!
+Successfully added SaltwaterAquarium.
+Successfully added Plant.
+Successfully added Plant.
+Successfully added Ornament.
+Successfully added Plant to DangerZone.
+Successfully added Plant to DangerZone.
+Successfully added Ornament to DangerZone.
+Successfully added SaltwaterFish to DangerZone.
+Successfully added SaltwaterFish to DangerZone.
+Fish fed: 2
+The value of Aquarium DangerZone is 96.17.
+Fish fed: 2
+DangerZone (SaltwaterAquarium):
+Fish: Curibou Devil
+Decorations: 3
+Comfort: 11
 ===
-Time needed: 1 second/s.
-*TXC*T****
-**********
-===
-Terrorists win!
-T*C*T
-**T**
-T*B*T
-**T**
-****T
+Successfully added SaltwaterAquarium.
+Water not suitable.
+Successfully added SaltwaterFish to Underworld.
+Successfully added FreshwaterAquarium.
+Successfully added FreshwaterFish to Riverworld.
+Invalid fish type.
+Invalid fish type.
+Invalid fish type.
+Successfully added Plant.
+Successfully added Plant to Riverworld.
+There isn’t a decoration of type Plant.
+Successfully added Plant.
+Successfully added Plant to Underworld.
+Fish fed: 1
+Fish fed: 1
+Fish price cannot be below or equal to 0.
+Underworld (SaltwaterAquarium):
+Fish: Nemo
+Decorations: 1
+Comfort: 5
+Riverworld (FreshwaterAquarium):
+Fish: Emerald
+Decorations: 1
+Comfort: 5
